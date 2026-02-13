@@ -15,15 +15,15 @@ function ordena(lista1, lista2){
         }
     }
 
-   return listaOrdenada.concat(i<lista1.lenght? lista1.slice(i) : lista2.slice(j));
+   return listaOrdenada.concat(i<lista1.length? lista1.slice(i) : lista2.slice(j));
 }
 
 //Merge Sort, ordena um array dividindo ele em duas partes e depois juntando as duas partes ordenadas repetindo o processo.
 function mergeSort(arr) {
-    if (arr.lenght >1){
-        const meio= Math.floor(arr.lenght/2);
+    if (arr.length >1){
+        const meio= Math.floor(arr.length/2);
         const parte1=mergeSort(arr.slice(0,meio));
-        const parte2=mergeSort(arr.slice(meio,arr.lenght));
+        const parte2=mergeSort(arr.slice(meio,arr.length));
         arr = ordena(parte1, parte2);
     }
     return arr;
