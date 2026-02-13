@@ -1,0 +1,14 @@
+{
+  "name": "algoritmos-js",
+  "version": "1.0.0",
+  "description": "Práticas de algoritmos e lógica de programação (ordenacao e busca) em JavaScript.",
+  "type": "commonjs",
+  "scripts": {
+    "selection": "node examples/run-selectionSort.js",
+    "insertion": "node examples/run-insertionSort.js",
+    "merge": "node examples/run-mergeSort.js",
+    "quick": "node examples/run-quickSort.js",
+    "binary": "node examples/run-binarySearch.js"
+  },
+  "license": "MIT"
+}
