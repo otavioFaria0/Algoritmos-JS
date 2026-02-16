@@ -6,11 +6,9 @@
  * - Implementação funcional (não altera o original).
  * 
 
-
  *
  * @template T
  * @param {T[]} input
- * @param {(item: T) => number} [key]
  * @returns {T[]} novo array ordenado (não altera o original)
  */
 function insertionSort(array) {
@@ -30,6 +28,5 @@ function insertionSort(array) {
 
   return arr;
 }
-console.log(insertionSort([5, 2, 9, 1, 5, 6, 3, 4, 8, 7, 0, 15, 10, 11, 14, 13, 12]));
 
 module.exports = { insertionSort };

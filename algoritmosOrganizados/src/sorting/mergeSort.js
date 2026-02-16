@@ -5,35 +5,37 @@
  * - Tem as mesmas vantagens do Quick Sort, mas é mais fácil de implementar de forma estável.
  * - Complexidade: O(n log n)
  *
- * @template T
- * @param {T[]} input
- * @param {(item: T) => number} [key]
- * @returns {T[]} novo array ordenado (não altera o original)
+ * 
+ * 
+ * @param {Array} array - Array a ser ordenado.
+ * @return {Array} - Array ordenado.
  */
-function mergeSort(input, key = (x) => x) {
-  if (input.length <= 1) return input.slice();
+function mergeSort(array) {
+  if (array.length <= 1) return array.slice();
 
-  const meio = Math.floor(input.length / 2);
-  const esquerda = mergeSort(input.slice(0, meio), key);
-  const direita = mergeSort(input.slice(meio), key);
+  const meio = Math.floor(array.length / 2);
+  const esquerda = mergeSort(array.slice(0, meio));
+  const direita = mergeSort(array.slice(meio));
 
-  return merge(esquerda, direita, key);
+  return merge(esquerda, direita);
 }
+
 
 /**
  * Intercala duas listas já ordenadas.
+ * - Complexidade: O(n) (onde n é a soma dos tamanhos de a e b).
+ *
  * @template T
  * @param {T[]} a
  * @param {T[]} b
- * @param {(item: T) => number} key
- * @returns {T[]}
+ * @returns {T[]} nova lista ordenada (não altera a e b)
  */
-function merge(a, b, key) {
+function merge(a, b) {
   const out = [];
   let i = 0, j = 0;
 
   while (i < a.length && j < b.length) {
-    if (key(a[i]) <= key(b[j])) out.push(a[i++]);
+    if (a[i] <= b[j]) out.push(a[i++]);
     else out.push(b[j++]);
   }
 
