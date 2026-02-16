@@ -2,8 +2,9 @@ const { swap } = require('../utils/swap');
 
 /**
  * Selection Sort (ordenação por seleção).
+ * - É o classico algoritmo de ordenação, mas raramente usado na prática devido à sua ineficiência.
  * - A cada passo encontra o menor elemento no trecho [i..fim] e coloca em i.
- * - Complexidade: O(n²)
+ * - Complexidade: O(n²) (ineficiente para grandes listas, mas fácil de entender).
  *
  * @template T
  * @param {T[]} input

@@ -1,6 +1,8 @@
 /**
  * Merge Sort.
  * - Divide o array ao meio, ordena cada metade e depois intercala (merge).
+ * - É um algoritmo de ordenação estável e eficiente.
+ * - Tem as mesmas vantagens do Quick Sort, mas é mais fácil de implementar de forma estável.
  * - Complexidade: O(n log n)
  *
  * @template T

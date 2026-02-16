@@ -1,7 +1,9 @@
 /**
  * Insertion Sort (ordenação por inserção).
- * - Vai construindo um trecho ordenado à esquerda e inserindo o próximo elemento na posição correta.
+ * - Vai lendo o array da esquerda para a direita, construindo um trecho ordenado à esquerda.
+ * - Vai inserindo o próximo elemento na posição correta.
  * - Complexidade: O(n²) (mas é ótimo para listas quase ordenadas).
+ * - Implementação funcional (não altera o original).
  *
  * @template T
  * @param {T[]} input

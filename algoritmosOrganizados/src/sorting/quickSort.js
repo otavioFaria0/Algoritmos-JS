@@ -2,6 +2,7 @@
  * Quick Sort.
  * - Escolhe um pivô, particiona o array em menores/maiores e ordena recursivamente.
  * - Complexidade média: O(n log n); pior caso: O(n²) (depende do pivô).
+ * - É um dos algoritmos de ordenação mais eficientes para grandes listas.
  *
  * Implementação funcional (não altera o original).
  *
