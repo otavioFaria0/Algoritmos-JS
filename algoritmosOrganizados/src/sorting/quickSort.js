@@ -5,30 +5,25 @@
  *
  * Implementação funcional (não altera o original).
  *
- * @template T
- * @param {T[]} input
- * @param {(item: T) => number} [key]
- * @returns {T[]} novo array ordenado
+ * @param {Array} array - Array a ser ordenado.
+ * @return {Array} - Array ordenado.
  */
-function quickSort(input, key = (x) => x) {
-  if (input.length <= 1) return input.slice();
-
-  const arr = input.slice();
-  const pivô = arr[Math.floor(arr.length / 2)];
-  const p = key(pivô);
-
-  const menores = [];
-  const iguais = [];
-  const maiores = [];
-
-  for (const item of arr) {
-    const k = key(item);
-    if (k < p) menores.push(item);
-    else if (k > p) maiores.push(item);
-    else iguais.push(item);
+function quickSort(array){
+  if (array.length < 2) return array;
+  else {
+    const pivo = array[0];
+    const menores = [];
+    const maiores = [];
+    for (let i=0; i<array.length; i++) {
+      if (array[i]<pivo){
+        menores[menores.length] = array[i];
+      }
+      else if (array[i]>pivo){
+        maiores[maiores.length] = array[i];
+      } 
+    }
+    return ([...quickSort(menores), pivo, ...quickSort(maiores)]);
   }
-
-  return quickSort(menores, key).concat(iguais).concat(quickSort(maiores, key));
 }
 
 module.exports = { quickSort };
