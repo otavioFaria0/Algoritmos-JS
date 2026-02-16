@@ -8,7 +8,13 @@ const livros = [
   { titulo: 'Elixir', preco: 50 },
   { titulo: 'GoLang', preco: 25 },
   { titulo: 'CSS', preco: 40 },
-  { titulo: 'C#', preco: 35 }
+  { titulo: 'C#', preco: 35 },
+  { titulo: 'Python', preco: 20 },
+  { titulo: 'Ruby', preco: 45 },
+  { titulo: 'PHP', preco: 15 },
+  { titulo: 'C++', preco: 30 },
+  { titulo: 'Rust', preco: 55 },
+  { titulo: 'Swift', preco: 25 },
 ];
 
 module.exports = { livros };

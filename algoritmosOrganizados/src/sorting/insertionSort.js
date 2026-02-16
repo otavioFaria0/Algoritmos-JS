@@ -9,6 +9,7 @@
  *
  * @template T
  * @param {T[]} input
+ * 
  * @returns {T[]} novo array ordenado (não altera o original)
  */
 function insertionSort(array) {
